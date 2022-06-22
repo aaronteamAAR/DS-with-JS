@@ -1,3 +1,4 @@
+
 const names = ["Max", "James", "Smart", "john"];
 console.log(names[3]);
 console.log(names.length);
@@ -25,42 +26,68 @@ names.splice(2, 3);
 
 console.log(names);
 
-console.clear()
+console.clear();
 // Sets
 
 const id = new Set();
 
+id.add([1, 3, 5, 6]);
+id.add("aaron");
+id.add("dave");
+id.add("rooney");
+id.add("hubert");
+id.add("debby");
+id.add("webster");
 
-id.add([1,3,5,6])
-id.add("aaron")
-id.add("dave")
-id.add("rooney")
-id.add("hubert")
-id.add("debby")
-id.add("webster")
-
-for(let el of id){
-    console.log(el)
+for (let el of id) {
+  console.log(el);
 }
 
-console.log(id.has("aaron"))
+console.log(id.has("aaron"));
 
-id.delete("debby")
-console.log(id)
+id.delete("debby");
+console.log(id);
 
-
-console.clear()
+console.clear();
 // Objects
 
+const set = {
+  name: "Max",
+  age: 31,
+  complexion: ["fair", "dark"],
+  greet() {
+    console.log("Hey\t" + this.name);
+  },
+};
 
-const set =  {
-    name: "Max",
-    age: 31,
-    complexion: ['fair', 'dark']
+console.log(` I am ${set.age} and i am ${set.complexion[1]}`);
+
+delete set.age;
+
+console.log(set.greet());
+
+console.clear();
+// Maps
+
+const result = new Map();
+
+result.set("average", 1.53);
+result.set("lastresult", null);
+
+const country = {
+  name: " Germay",
+  population: 50000,
+};
+
+result.set(country, 0.89);
+
+
+for(const num of result){
+    console.log(num)
 }
- 
-console.log(` I am ${set.age} and i am ${set.complexion[1]}`)
+console.log(result.get('average'))
+console.log(result.average)
 
-delete set.age
-
-console.log(set)
+// Deletion in maps
+result.delete('lastresult')
+console.log(result)
