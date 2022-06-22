@@ -20,3 +20,10 @@ console.log(names)
 
 const aaron = names.findIndex(el => el === 'Aaron')
 console.warn(aaron)
+
+
+
+const yam = names.findIndex(el => el === 'Aaron')
+names.splice(2, 3)
+
+console.log(names)
