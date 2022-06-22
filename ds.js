@@ -48,3 +48,19 @@ console.log(id.has("aaron"))
 id.delete("debby")
 console.log(id)
 
+
+console.clear()
+// Objects
+
+
+const set =  {
+    name: "Max",
+    age: 31,
+    complexion: ['fair', 'dark']
+}
+ 
+console.log(` I am ${set.age} and i am ${set.complexion[1]}`)
+
+delete set.age
+
+console.log(set)
