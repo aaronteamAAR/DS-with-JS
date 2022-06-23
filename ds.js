@@ -109,9 +109,28 @@ class Linkedlist {
     }
     this.tail = newNode;
     if (!this.head) {
-      this.head - newNode;
+      this.head = newNode;
     }
+  }
+  toArray(){
+      const elements = []
+      let curNode = this.head
+      while (curNode){
+          elements.push(curNode)
+          curNode = curNode.next
+      }
+      return elements
   }
 }
 
 const linkedlist1 = new Linkedlist();
+
+linkedlist1.append("Aaron")
+linkedlist1.append("is")
+linkedlist1.append("a")
+linkedlist1.append("genius")
+linkedlist1.append("and ")
+linkedlist1.append("king")
+
+
+console.log(linkedlist1.toArray())
