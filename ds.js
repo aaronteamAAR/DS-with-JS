@@ -1,4 +1,3 @@
-
 const names = ["Max", "James", "Smart", "john"];
 console.log(names[3]);
 console.log(names.length);
@@ -81,13 +80,38 @@ const country = {
 
 result.set(country, 0.89);
 
-
-for(const num of result){
-    console.log(num)
+for (const num of result) {
+  console.log(num);
 }
-console.log(result.get('average'))
-console.log(result.average)
+console.log(result.get("average"));
+console.log(result.average);
 
 // Deletion in maps
-result.delete('lastresult')
-console.log(result)
+result.delete("lastresult");
+console.log(result);
+
+console.clear();
+
+// Custom data structure
+// Linked list
+
+class Linkedlist {
+  constructor() {
+    this.head = null; //First Element of the list
+    this.tail = null; // Last element of the list
+  }
+
+  append(value) {
+    const newNode = { value: value, next: null };
+
+    if (this.tail) {
+      this.tail.next = newNode;
+    }
+    this.tail = newNode;
+    if (!this.head) {
+      this.head - newNode;
+    }
+  }
+}
+
+const linkedlist1 = new Linkedlist();
